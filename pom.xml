@@ -167,7 +167,7 @@
 			<modules>
 				<module>core</module>
 				<module>api</module>
-				<module>jenkins-build-collector</module>
+		<!-- 	<module>jenkins-build-collector</module>
 				<module>sonar-codequality-collector</module>
 				<module>subversion-scm-collector</module>
 				<module>github-scm-collector</module>
@@ -179,7 +179,8 @@
 				<module>jenkins-cucumber-test-collector</module>
 				<module>chat-ops-collector</module>
 				<module>aws-cloud-collector</module>
-				<module>UI</module>
+				<module>UI</module>-->
+				<module>icart-deployment-collector</module>
 			</modules>
 			<build>
 				<pluginManagement>
