@@ -186,7 +186,7 @@ public class DefaultIcartClient implements IcartClient {
 //                    versionFileMap.put(str(versionObject, "id"), physicalFileNames);
 //                }
 //                for (String fileName : physicalFileNames) {
-//                    environmentStatuses.add(buildUdeployEnvResCompData(environment, application, versionObject, fileName, childObject, failedComponents));
+                    environmentStatuses.add(buildIcartEnvResCompData(environment, application));//, versionObject, fileName, childObject, failedComponents));
 //                }
 //            }
 //        }
@@ -238,7 +238,7 @@ public class DefaultIcartClient implements IcartClient {
         return fileName;
     }
 
-    private IcartEnvResCompData buildUdeployEnvResCompData(Environment environment, IcartApplication application, JSONObject versionObject, String fileName, JSONObject childObject, Set<String> failedComponents) {
+    private IcartEnvResCompData buildIcartEnvResCompData(Environment environment, IcartApplication application){//, JSONObject versionObject, String fileName, JSONObject childObject, Set<String> failedComponents) {
         IcartEnvResCompData data = new IcartEnvResCompData();
 //        data.setEnvironmentName(environment.getName());
 //        data.setCollectorItemId(application.getId());
@@ -258,7 +258,7 @@ public class DefaultIcartClient implements IcartClient {
 		data.setComponentVersion("compVersion");
 		data.setAsOfDate(0);
 		data.setDeployed(true);
-		data.setComponentName(fileName);
+		data.setComponentName("fakeFileName");
 		data.setOnline(true);
 		return data;
 	}
