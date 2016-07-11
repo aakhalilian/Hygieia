@@ -62,7 +62,7 @@ public class DefaultIcartClient implements IcartClient {
 		IcartApplication application = new IcartApplication();
 		application.setInstanceUrl("fakeUrl");
 		application.setApplicationName("fakeAppName");
-		application.setApplicationId("0001");
+		application.setApplicationId("12");
 		applications.add(application);
 		return applications;
 	}
@@ -129,7 +129,7 @@ public class DefaultIcartClient implements IcartClient {
 		component.setComponentName("fakeComponent");
 		component.setComponentVersion("fakeVersion");
 		component.setDeployed(true);
-		component.setAsOfDate(0);
+		component.setAsOfDate(14682030759910L);
 		components.add(component);
 
 		return components;
@@ -256,7 +256,7 @@ public class DefaultIcartClient implements IcartClient {
 		data.setEnvironmentName(environment.getName());
 		data.setCollectorItemId(application.getId());
 		data.setComponentVersion("compVersion");
-		data.setAsOfDate(0);
+		data.setAsOfDate(1468203075991L);
 		data.setDeployed(true);
 		data.setComponentName("fakeFileName");
 		data.setOnline(true);

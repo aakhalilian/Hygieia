@@ -20,7 +20,7 @@ public interface IcartApplicationRepository extends BaseCollectorItemRepository<
      * @return a {@link IcartApplication} instance
      */
     @Query(value="{ 'collectorId' : ?0, options.instanceUrl : ?1, options.applicationId : ?2}")
-    IcartApplication findUDeployApplication(ObjectId collectorId, String instanceUrl, String applicationId);
+    IcartApplication findIcartApplication(ObjectId collectorId, String instanceUrl, String applicationId);
 
     /**
      * Finds all {@link IcartApplication}s for the given instance URL.

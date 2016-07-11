@@ -50,15 +50,15 @@ public class IcartCollectorTask extends CollectorTask<IcartCollector> {
 
     @Autowired
     public IcartCollectorTask(TaskScheduler taskScheduler,
-                                IcartCollectorRepository uDeployCollectorRepository,
-                                IcartApplicationRepository uDeployApplicationRepository,
+                                IcartCollectorRepository iCartCollectorRepository,
+                                IcartApplicationRepository iCartApplicationRepository,
                                 EnvironmentComponentRepository envComponentRepository,
                                 EnvironmentStatusRepository environmentStatusRepository,
                                 IcartSettings uDeploySettings, IcartClient uDeployClient,
                                 ComponentRepository dbComponentRepository) {
         super(taskScheduler, "UDeploy");
-        this.iCartCollectorRepository = uDeployCollectorRepository;
-        this.iCartApplicationRepository = uDeployApplicationRepository;
+        this.iCartCollectorRepository = iCartCollectorRepository;
+        this.iCartApplicationRepository = iCartApplicationRepository;
         this.iCartSettings = uDeploySettings;
         this.iCartClient = uDeployClient;
         this.envComponentRepository = envComponentRepository;
@@ -193,10 +193,10 @@ public class IcartCollectorTask extends CollectorTask<IcartCollector> {
      * For each {@link IcartApplication}, update the current
      * {@link EnvironmentComponent}s and {@link EnvironmentStatus}.
      *
-     * @param uDeployApplications list of {@link IcartApplication}s
+     * @param iCartApplications list of {@link IcartApplication}s
      */
-    private void updateData(List<IcartApplication> uDeployApplications) {
-        for (IcartApplication application : uDeployApplications) {
+    private void updateData(List<IcartApplication> iCartApplications) {
+        for (IcartApplication application : iCartApplications) {
             List<EnvironmentComponent> compList = new ArrayList<>();
             List<EnvironmentStatus> statusList = new ArrayList<>();
             long startApp = System.currentTimeMillis();
@@ -267,7 +267,7 @@ public class IcartCollectorTask extends CollectorTask<IcartCollector> {
 
     private boolean isNewApplication(IcartCollector collector,
                                      IcartApplication application) {
-        return iCartApplicationRepository.findUDeployApplication(
+        return iCartApplicationRepository.findIcartApplication(
                 collector.getId(), application.getInstanceUrl(),
                 application.getApplicationId()) == null;
     }
