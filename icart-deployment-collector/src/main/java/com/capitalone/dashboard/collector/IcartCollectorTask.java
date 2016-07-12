@@ -54,13 +54,13 @@ public class IcartCollectorTask extends CollectorTask<IcartCollector> {
                                 IcartApplicationRepository iCartApplicationRepository,
                                 EnvironmentComponentRepository envComponentRepository,
                                 EnvironmentStatusRepository environmentStatusRepository,
-                                IcartSettings uDeploySettings, IcartClient uDeployClient,
+                                IcartSettings iCartSettings, IcartClient iCartClient,
                                 ComponentRepository dbComponentRepository) {
-        super(taskScheduler, "UDeploy");
+        super(taskScheduler, "iCart");
         this.iCartCollectorRepository = iCartCollectorRepository;
         this.iCartApplicationRepository = iCartApplicationRepository;
-        this.iCartSettings = uDeploySettings;
-        this.iCartClient = uDeployClient;
+        this.iCartSettings = iCartSettings;
+        this.iCartClient = iCartClient;
         this.envComponentRepository = envComponentRepository;
         this.environmentStatusRepository = environmentStatusRepository;
         this.dbComponentRepository = dbComponentRepository;

@@ -7,10 +7,10 @@ import java.util.List;
  * Collector implementation for UDeploy that stores UDeploy server URLs.
  */
 public class IcartCollector extends Collector {
-    private List<String> udeployServers = new ArrayList<>();
+    private List<String> iCcartServers = new ArrayList<>();
 
     public List<String> getIcartServers() {
-        return udeployServers;
+        return iCcartServers;
     }
 
     public static IcartCollector prototype(List<String> servers) {
